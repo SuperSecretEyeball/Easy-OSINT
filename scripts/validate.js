@@ -1,5 +1,6 @@
-const fs = require('fs');
-for (const file of ['index.html','src/styles.css','src/app.js']) {
-  if (!fs.existsSync(file) || fs.statSync(file).size === 0) throw new Error(`${file} is missing or empty`);
+import { readFileSync } from 'node:fs';
+for (const file of ['index.html', 'src/main.js', 'src/styles.css']) {
+  const content = readFileSync(file, 'utf8');
+  if (!content.trim()) throw new Error(`${file} is empty`);
 }
-console.log('Static application files validated.');
+console.log('Static app files validated.');
