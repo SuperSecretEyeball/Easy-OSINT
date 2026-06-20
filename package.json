@@ -1,0 +1,13 @@
+{
+  "name": "easy-osint",
+  "version": "1.0.0",
+  "description": "A polished multi-engine OSINT search query generator and launcher.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 4173",
+    "build": "node scripts/validate.js"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
